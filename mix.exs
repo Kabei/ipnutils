@@ -23,7 +23,6 @@ defmodule Ipnutils.MixProject do
     [
       {:decimal, "~> 2.0"},
       {:jason, "~> 1.3"},
-      # {:cowlib, "~> 2.11"},
       {:ecto_sql, "~> 3.7"},
       {:cubdb, git: "https://github.com/lucaong/cubdb"},
       {:benchee, "~> 1.0", only: :dev}
