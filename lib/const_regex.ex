@@ -14,22 +14,22 @@ defmodule Const.Regex do
   def physical_address , do: ~r/^[#.0-9a-zA-Z\s,-]+$/
 
   # {28,38}
-  def address, do: ~r/(1|2)[A-HJ-NP-Za-km-z1-9]{1,}+$/
+  def address, do: ~r/(1|2)[1-9A-HJ-NP-Za-km-z]{1,}+$/
 
   def domain, do: ~r/^[A-Za-z0-9][A-Za-z0-9-]{1,61}[A-Za-z0-9]\.[A-Za-z]{2,}$/
 
-  # def public_address, do: ~r/1[A-HJ-NP-Za-km-z1-9]{29,38}/
-  def public_address, do: ~r/1[A-HJ-NP-Za-km-z1-9]{1,}+$/
+  # def public_address, do: ~r/1[1-9A-HJ-NP-Za-km-z]{29,38}/
+  def public_address, do: ~r/1[1-9A-HJ-NP-Za-km-z]{1,}$/
 
-  def private_address, do: ~r/2[A-HJ-NP-Za-km-z1-9]{1,}+$/
+  def private_address, do: ~r/2[1-9A-HJ-NP-Za-km-z]{1,}$/
 
-  def combined_address, do: ~r/3[A-HJ-NP-Za-km-z1-9]{1,}+$/
+  def combined_address, do: ~r/3[1-9A-HJ-NP-Za-km-z]{1,}$/
 
   def username, do: ~r/((?!^[\.\-\_])([a-z0-9\.\-\_])(?![\.\_\-][\.\_\-])(?![\.\-\_]$)){1,30}/
 
   def hashtag, do: ~r/(?:$|)#[A-Za-z0-9\-\.\_]+(?:$|)/
 
-  def base58, do: ~r/^[A-HJ-NP-Za-km-z1-9]+$/
+  def base58, do: ~r/^[1-9A-HJ-NP-Za-km-z]+$/
 
   def base62, do: ~r/^[0-9A-Za-z]+$/
 

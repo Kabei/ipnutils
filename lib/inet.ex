@@ -42,9 +42,6 @@ defmodule Inet do
   end
 
   def resolve_ip(host) do
-    host
-    |> to_charlist()
-    |> :inet_udp.getaddr()
-    |> elem(1)
+    host |> to_charlist() |> :inet_udp.getaddr() |> elem(1)
   end
 end

@@ -30,7 +30,7 @@ defmodule Ipnutils.Errors do
       {40217, "Outputs exceeded"},
       {40218, "Inputs exceeded"},
       {40219, "Invalid refund"},
-      {40220, "Invalid pool fees amount"},
+      {40220, "Invalid returned amount"},
       {40221, "The genesis block is not built"},
       {40222, "Token wrong ID type"},
       {40223, "Token symbol already used"},
