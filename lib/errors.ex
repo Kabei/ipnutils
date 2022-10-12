@@ -48,6 +48,7 @@ defmodule Ipnutils.Errors do
       {40235, "Invalid Inputs and Outputs"},
       {40236, "Invalid Token-Fees"},
       {40237, "Invalid day to type transaction"},
+      {40238, "Memo data is too big"},
       {50001, "Node offline"}
     ]
   else
