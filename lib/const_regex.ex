@@ -11,6 +11,8 @@ defmodule Const.Regex do
 
   def phone, do: ~r/^\+{1}[0-9]{11,15}$/
 
+  def hostname, do: ~r/^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+
   def physical_address , do: ~r/^[#.0-9a-zA-Z\s,-]+$/
 
   # {28,38}

@@ -24,7 +24,7 @@ defmodule Ipnutils.MixProject do
       {:decimal, "~> 2.0"},
       {:jason, "~> 1.3"},
       {:ecto_sql, "~> 3.7"},
-      {:cubdb, git: "https://github.com/lucaong/cubdb"},
+      {:cubdb, "~> 2.0.1"},
       {:benchee, "~> 1.0", only: :dev}
     ]
   end

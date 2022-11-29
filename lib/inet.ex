@@ -14,6 +14,14 @@ defmodule Inet do
     {a, b, c, 0}
   end
 
+  def to_str(address) when address |> is_binary do
+    address
+  end
+
+  def to_str(address) when address |> is_list do
+    address |> IO.iodata_to_binary()
+  end
+
   def to_str(ipaddress) do
     :inet.ntoa(ipaddress)
     |> to_string
