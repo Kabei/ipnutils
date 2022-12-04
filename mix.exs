@@ -25,6 +25,8 @@ defmodule Ipnutils.MixProject do
       {:jason, "~> 1.3"},
       {:ecto_sql, "~> 3.7"},
       {:cubdb, "~> 2.0.1"},
+      #{:fastglobal, "~> 1.0"},
+      {:globalconst, "~> 0.3.0"},
       {:benchee, "~> 1.0", only: :dev}
     ]
   end
