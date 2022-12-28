@@ -18,7 +18,8 @@ defmodule Const.Regex do
   # {28,38}
   def address, do: ~r/(1x)[1-9A-HJ-NP-Za-km-z]{1,}+$/
 
-  def domain, do: ~r/^[A-Za-z0-9][A-Za-z0-9-]{1,61}[A-Za-z0-9]\.[A-Za-z]{2,}$/
+  # def domain, do: ~r/^[A-Za-z0-9][A-Za-z0-9-]{1,61}[A-Za-z0-9]\.[A-Za-z]{2,}$/
+  def domain, do: ~r/^[a-z0-9]{0,1}[a-z0-9-]{0,61}[a-z0-9]{1,1}\.[a-z]{2,10}$/
 
   # def public_address, do: ~r/1[1-9A-HJ-NP-Za-km-z]{29,38}/
   def public_address, do: ~r/1x[1-9A-HJ-NP-Za-km-z]{1,}$/
