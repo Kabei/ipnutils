@@ -11,15 +11,20 @@ defmodule Const.Regex do
 
   def phone, do: ~r/^\+{1}[0-9]{11,15}$/
 
-  def hostname, do: ~r/^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+  def hostname,
+    do:
+      ~r/^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 
-  def physical_address , do: ~r/^[#.0-9a-zA-Z\s,-]+$/
+  def physical_address, do: ~r/^[#.0-9a-zA-Z\s,-]+$/
 
   # {28,38}
   def address, do: ~r/(1x)[1-9A-HJ-NP-Za-km-z]{1,}+$/
 
   # def domain, do: ~r/^[A-Za-z0-9][A-Za-z0-9-]{1,61}[A-Za-z0-9]\.[A-Za-z]{2,}$/
-  def domain, do: ~r/^[a-z0-9]{0,1}[a-z0-9-]{0,61}[a-z0-9]{1,1}\.[a-z]{2,10}$/
+  # def domain, do: ~r/^[a-z0-9]{0,1}[a-z0-9-]{0,61}[a-z0-9]{1,1}\.[a-z]{2,10}$/
+  def domain,
+    do:
+      ~r/^[a-z0-9]{0,1}[a-z0-9-]{0,61}[a-z0-9]{1,1}\.(afg|ala|alb|dza|asm|and|ago|aia|ata|atg|arg|arm|abw|aus|aut|aze|bhs|bhr|bgd|brb|blr|bel|blz|ben|bmu|btn|bol|bes|bih|bwa|bvt|bra|iot|vgb|brn|bgr|bfa|bdi|khm|cmr|can|cpv|cym|caf|tcd|chl|chn|cxr|cck|col|com|cok|cri|hrv|cub|cuw|cyp|cze|cod|dnk|dji|dma|dom|tls|ecu|egy|slv|gnq|eri|est|eth|flk|fro|fji|fin|fra|guf|pyf|atf|gab|gmb|geo|deu|gha|gib|grc|grl|grd|glp|gum|gtm|ggy|gin|gnb|guy|hti|hmd|hnd|hkg|hun|isl|ind|idn|irn|irq|irl|imn|isr|ita|civ|jam|jpn|jey|jor|kaz|ken|kir|xxk|kwt|kgz|lao|lva|lbn|lso|lbr|lby|lie|ltu|lux|mac|mkd|mdg|mwi|mys|mdv|mli|mlt|mhl|mtq|mrt|mus|myt|mex|fsm|mda|mco|mng|mne|msr|mar|moz|mmr|nam|nru|npl|nld|ant|ncl|nzl|nic|ner|nga|niu|nfk|prk|mnp|nor|omn|pak|plw|pse|pan|png|pry|per|phl|pcn|pol|prt|pri|qat|cog|reu|rou|rus|rwa|blm|shn|kna|lca|maf|spm|vct|wsm|smr|stp|sau|sen|srb|scg|syc|sle|sgp|sxm|svk|svn|slb|som|zaf|sgs|kor|ssd|esp|lka|sdn|sur|sjm|swz|swe|che|syr|twn|tjk|tza|tha|tgo|tkl|ton|tto|tun|tur|tkm|tca|tuv|vir|uga|ukr|are|gbr|usa|umi|ury|uzb|vut|vat|ven|vnm|wlf|esh|yem|zmb|zwe|ipn|wlt|iwl|opa|btc|mtv|nop)$/
 
   # def public_address, do: ~r/1[1-9A-HJ-NP-Za-km-z]{29,38}/
   def public_address, do: ~r/1x[1-9A-HJ-NP-Za-km-z]{1,}$/
@@ -64,4 +69,8 @@ defmodule Const.Regex do
   def token_unique, do: ~r/^(PDu-)[0-9A-Za-z]{5,24}+$/
   def token_expirable, do: ~r/^(PDe-)[0-9A-Za-z]{5,24}+$/
   def resize, do: ~r/^\d{1,4}$|^\d{1,4}x$|^x\d{1,4}$|^\d{1,4}x\d{1,4}$/
+
+  def url do
+    ~r/(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/
+  end
 end
