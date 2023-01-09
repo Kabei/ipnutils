@@ -24,7 +24,7 @@ defmodule Const.Regex do
   # def domain, do: ~r/^[a-z0-9]{0,1}[a-z0-9-]{0,61}[a-z0-9]{1,1}\.[a-z]{2,10}$/
   def domain,
     do:
-      ~r/^[a-z0-9]{0,1}[a-z0-9-]{0,61}[a-z0-9]{1,1}\.(afg|ala|alb|dza|alg|asm|and|ago|aia|ata|atg|arg|arm|abw|aru|aus|aut|aze|bhs|bhr|bgd|brb|blr|bel|blz|ben|bmu|btn|bol|bes|bih|bwa|bvt|bra|iot|vgb|brn|bgr|bfa|bdi|khm|cmr|can|cpv|cym|caf|tcd|cha|chl|chi|chn|cxr|cck|col|cmr|cok|cri|hrv|cro|cub|cuw|cyp|cze|cod|dnk|dji|dma|dom|tls|ecu|egy|slv|gnq|eri|est|etp|flk|fro|far|fji|fin|fra|guf|pyf|atf|gab|gmb|geo|deu|gha|gib|grc|grl|grd|glp|gum|gtm|ggy|gin|gnb|guy|hti|hmd|hnd|hkg|hun|isl|ind|idn|irn|irq|irl|imn|isr|ita|civ|jam|jpn|jey|jor|kaz|ken|kir|xxk|kwt|kgz|lao|lva|lbn|lso|lbr|lby|lie|ltu|lux|mac|mkd|mdg|mwi|mys|mdv|mli|mlt|mhl|mtq|mrt|mus|myt|mex|fsm|mic|mda|mco|mon|mng|mne|msr|mar|moz|mmr|nam|nru|npl|nld|ant|ncl|nzl|nic|ner|nga|niu|nfk|prk|mnp|nor|omn|pak|plw|pse|pan|png|pry|per|phl|pcn|pol|prt|pri|qat|cog|reu|rou|rus|rwa|blm|shn|kna|lca|maf|spm|vct|wsm|smr|stp|sau|sen|srb|scg|syc|sle|sgp|sxm|svk|svn|slb|som|zaf|sgs|kor|ssd|esp|lka|sdn|sur|sjm|swz|swe|che|syr|twn|tjk|tza|tha|tgo|tkl|ton|tto|tun|tur|tkm|tca|tuv|vir|uga|ukr|are|uae|gbr|usa|umi|ury|uzb|vut|vat|ven|vnm|wlf|esh|yem|zmb|zwe|ipn|wlt|iwl|opa|btc|mtv|nop)$/
+      ~r/^[a-z0-9]{0,1}[a-z0-9-]{0,61}[a-z0-9]{1,1}\.(cmm|npo|ntw|cyber|ipn|wlt|iwl|ippan|btc|cyb|fin|geo|and|gold|god|lux|yes|bbb|i|u|btw|nws|diy|iot|69|opasy)$/
 
   # def public_address, do: ~r/1[1-9A-HJ-NP-Za-km-z]{29,38}/
   def public_address, do: ~r/1x[1-9A-HJ-NP-Za-km-z]{1,}$/
