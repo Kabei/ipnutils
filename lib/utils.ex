@@ -64,61 +64,17 @@ defmodule Utils do
     end
   end
 
-  def from_date_to_time(date, :start, unit_time) when is_binary(date) do
-    d = DateTime.from_iso8601(date <> "T00:00:00Z")
+  def from_date_to_time(date, unit_time) when is_binary(date) do
+    d = DateTime.from_iso8601(date)
 
     case d do
       {:error, _} ->
-        nil
+        0
 
       {:ok, dt, _} ->
         DateTime.to_unix(dt, unit_time)
     end
   end
 
-  def from_date_to_time(date, :end, unit_time) when is_binary(date) do
-    d = DateTime.from_iso8601(date <> "T23:59:59Z")
-
-    case d do
-      {:error, _} ->
-        nil
-
-      {:ok, dt, _} ->
-        DateTime.to_unix(dt, unit_time)
-    end
-  end
-
-  def from_date_to_time(_date, _range, _unit_time), do: nil
-
-  # def cast_integer(val), do: cast_integer(val, nil)
-
-  # def cast_integer(nil, default), do: default
-  # def cast_integer([], default), do: default
-  # def cast_integer(%{}, default), do: default
-
-  # def cast_integer(val, _default) when is_integer(val), do: val
-  # def cast_integer(val, _default) when is_float(val), do: trunc(val)
-
-  # def cast_integer(val, default) when is_binary(val) do
-  #   try do
-  #     String.to_integer(val)
-  #   rescue
-  #     ArgumentError ->
-  #       default
-  #   end
-  # end
-
-  # def cast_integer(val, _default), do: val
-
-  # def cast_date(nil), do: nil
-
-  # def cast_date(date, default) do
-  #   case Date.from_iso8601(date) do
-  #     {:error, _} ->
-  #       default
-
-  #     {:ok, response} ->
-  #       response
-  #   end
-  # end
+  def from_date_to_time(_date, _range, _unit_time), do: 0
 end

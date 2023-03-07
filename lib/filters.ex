@@ -1,7 +1,7 @@
 defmodule Ipnutils.Filters do
   import Ecto.Query, only: [limit: 2, offset: 2]
-  @default_limit 20
-  @max_limit 50
+  @default_limit 30
+  @max_limit 100
 
   def filter_limit(query, params) do
     filter_limit(query, params, @default_limit, @max_limit)
